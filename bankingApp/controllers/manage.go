@@ -72,6 +72,10 @@ func (manage *ManageController) Home() {
 
 	if err == orm.ErrNoRows {
 		beego.Debug("No result found.")
+		flash := beego.NewFlash()
+		flash.Error("The email or password is incorrect.")
+		flash.Store(&manage.Controller)
+
 	} else if err == orm.ErrMissPK {
 		beego.Debug("No primary key found.")
 	} else {
