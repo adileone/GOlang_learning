@@ -21,7 +21,7 @@ Il for ha tre componenti separati da punto e virgola:
 Nota: diversamente da altri linguaggi come C, Java, o Javascript i tre componenti del costrutto ciclico non sono tra parentesi ( ) e le parentesi { } sono obbligatorie.
 */
 
-func for_cycle() string {
+func forCycle() string {
 	sum := 0
 	for i := 0; i < 10; i++ {
 		sum += i
@@ -52,7 +52,7 @@ func (v Vertex) Scale(f float64) {
 }
 
 func main() {
-	fmt.Println(for_cycle())
+	fmt.Println(forCycle())
 	v := Vertex{3, 4}
 	v.Scale(10)
 	fmt.Println(v.Abs())
